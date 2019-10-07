@@ -1,5 +1,6 @@
 package com.example.firtstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log.d
 import com.google.android.material.snackbar.Snackbar
@@ -17,8 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        bigButton.setOnClickListener {
-            d("tomek ", "Button was clieked !!")
+        bigButton.setOnClickListener {   //gdy ktos kliknie tosie wykona
+            d("tomek ", "Button was clicked !!")
+            startActivity(Intent(this,AboutMe::class.java))
         }
 
     }
