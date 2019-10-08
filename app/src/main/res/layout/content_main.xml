@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="272dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -33,20 +33,34 @@
 
     <Button
         android:id="@+id/GameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="23dp"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/FijiImage"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toTopOf="@+id/editText" />
 
     <TextView
         android:id="@+id/MessageButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GameButton" />
+
+    <ImageView
+        android:id="@+id/FijiImage"
+        android:layout_width="236dp"
+        android:layout_height="227dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:srcCompat="@drawable/fiji" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

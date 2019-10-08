@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.content_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,16 +15,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        bigButton.setOnClickListener {   //gdy ktos kliknie tosie wykona
+        bigButton.setOnClickListener {
             d("tomek ", "Button was clicked !!")
-            startActivity(Intent(this,AboutMe::class.java))
+            startActivity(Intent(this,AboutMe::class.   java))
         }
 
         GameButton.setOnClickListener {
             d("tomus"," Hello you little bastard ${editText.text}!")
             MessageButton.text = "Hello ${editText.text}!!!"
-
+            if(editText.text.toString() == "speedway")
+                FijiImage.setImageResource(R.drawable.speedway)
+            else if (editText.text.toString() == "fiji")
+                FijiImage.setImageResource(R.drawable.fiji)
         }
+
 
     }
 }
